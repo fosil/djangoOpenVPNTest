@@ -11,3 +11,11 @@ To run this application:
 ```python
 python manage.py runserver
 ```
+
+## Instalace openVPN
+- curl -fsSL https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/openvpn-repo-pkg-keyring.gpg
+- DISTRO=$(lsb_release -c | awk '{print $2}')
+- sudo curl -fsSL https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-$DISTRO.list -o /etc/apt/sources.list.d/openvpn3.list
+- sudo apt update
+- sudo apt install openvpn3
+- openvpn3 config-import --config profile.ovpn

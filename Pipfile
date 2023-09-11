@@ -1,0 +1,40 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = "3.8"
+
+[packages]
+django = "==3.2.9"
+django-extensions = "*"
+django-environ = "*"
+djangorestframework = "==3.12.4"
+django-filter = "*"
+markdown = "*"
+mergedeep = "*"
+requests = "*"
+psycopg2-binary = "*"
+zeep = "*"
+gunicorn = "*"
+django-cors-headers = "*"
+ares-util = "*"
+xmltodict = "*"
+sentry-sdk = "*"
+coreapi = "*"
+python-dateutil = "*"
+werkzeug = "*"
+py3-validate-email = "*"
+django-silk = "*"
+
+[dev-packages]
+flake8 = "*"
+werkzeug = "*"
+watchdog = "*"
+
+[scripts]
+devserver = "./bin/pipenvscripts/devserver.sh"
+djangoshell = "./bin/pipenvscripts/djangoshell.sh"
+postdeploy = "./bin/pipenvscripts/postdeploy.sh"
+collectstatic = "./bin/pipenvscripts/collectstatic.sh"
